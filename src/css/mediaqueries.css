@@ -1,0 +1,61 @@
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        background: var(--clr-neutral-400);
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        justify-content: center;
+        box-shadow: 0 1px 5px var(--clr-neutral-600);
+        transition: 300ms ease-in-out;
+    }
+
+    .nav.active {
+        height: 500px;
+    }
+
+    .nav__links {
+        font-size: 1.75rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .intro__job-title {
+        font-size: 2.5rem;
+    }
+    
+    .intro__name {
+        font-size: 1.5rem;
+    }
+
+    .about__description {
+        width: 100%;
+    }
+
+    .skills-description {
+        font-size: 1.125rem;
+    }
+
+    .skills-wrapper {
+        width: 100%;
+    }
+
+    .skills {
+        width: 170px;
+        font-size: 0.75rem;
+    }
+
+    .projects-list th:nth-child(3), .projects-list th:last-child, .projects-list td:nth-child(3), .projects-list td:last-child {
+        display: none;
+    }
+
+    .contact__description {
+        width: 100%;
+    }
+}

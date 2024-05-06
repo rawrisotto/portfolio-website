@@ -1,0 +1,321 @@
+@import url('./reset.css');
+
+:root {
+    --clr-primary-400: hsl(353, 91%, 39%);
+    --clr-primary-300: hsl(334, 96%, 69%);
+
+    --clr-neutral-100: hsl(0, 0%, 95%);
+    --clr-neutral-400: hsl(90, 3%, 85%);
+    --clr-neutral-500: hsl(60, 2%, 75%);
+    --clr-neutral-600: hsl(34, 3%, 44%);
+    --clr-neutral-900: hsl(0, 0%, 5%);
+
+    --ff-primary: "League Spartan", sans-serif;
+    --ff-secondary: "Oxygen", sans-serif;
+    --fs-base: 18px;
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    background-color: var(--clr-neutral-500);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-base);
+    color: var(--clr-neutral-900);
+}
+
+/* main {
+    padding: 4rem 2rem;
+} */
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+}
+
+.section__title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 0 auto;
+    background: var(--clr-primary-400);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+.divider {
+    background: linear-gradient(to right, var(--clr-neutral-600), var(--clr-neutral-900));
+    height: 2px;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--clr-neutral-600);
+    color: var(--clr-neutral-400);
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.btn:hover {
+    color: var(--clr-primary-400);
+    background: var(--clr-neutral-900);
+}
+
+/* Header Styles */
+.header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--clr-neutral-400);
+    box-shadow: 0 1px 5px var(--clr-neutral-600);
+    /* border-bottom: 1px solid var(--clr-neutral-600); */
+    position: relative;
+}
+
+.header__logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav__links {
+    font-size: 1.25rem;
+}
+
+.nav__links::after {
+    content: "";
+    margin-top: 0.25rem;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-primary-400);
+    transform: scale(0);
+    transition: 0.5s all ease-out;
+}
+
+.nav__links:hover::after, .nav .nav__links.active::after, .header a:hover {
+    transform: scale(1);
+    color: var(--clr-primary-400);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+    background: inherit;
+    height: 22px;
+    width: 22px;
+}
+
+.hamburger span {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: var(--clr-neutral-900);
+    transition: all 100ms ease-in-out;
+}
+
+.hamburger.active span:first-child {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 28px;
+    transition: all 100ms ease-in-out;
+}
+
+.hamburger.active span:nth-child(2) {
+    transform-origin: center;
+    width: 0;
+    transition: all 100ms ease-in-out;
+}
+
+.hamburger.active span:last-child {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    width: 28px;
+    transition: all 100ms ease-in-out;
+}
+
+/* About Styles */
+.section.intro {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40%;
+    background-attachment: fixed;
+    color: var(--clr-neutral-100);
+    display: grid;
+    align-items: center;
+}
+
+.intro__job-title {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.intro__name {
+    font-family: var(--ff-secondary);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.about__img {
+    max-width: 150px;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.about__description {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.about__description span {
+    display: block;
+    margin: 1rem 0;
+}
+
+.skills-description {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.skills {
+    width: 200px;
+    text-align: center;
+    border: 1px solid var(--clr-neutral-600);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2px var(--clr-neutral-600);
+    padding: 1rem 3rem;
+    display: block;
+    font-weight: 600;
+    font-family: var(--ff-secondary);
+    cursor: pointer;
+    background: var(--clr-neutral-400);
+}
+
+.skills:hover {
+    box-shadow: 0 0 5px var(--clr-neutral-900);
+    transition: 200ms ease-in-out;
+}
+
+/* Project Styles */
+.projects-container {
+    padding: 0 1rem;
+}
+
+.projects-list {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.projects-list th {
+    font-size: 1.25rem;
+    font-family: var(--ff-secondary);
+}
+
+.projects-list td, th {
+    padding: 1.25rem;
+}
+
+.projects-list th:first-child {
+    width: 10%;
+}
+
+.projects-list th:not(:first-child) {
+    width: 30%;
+}
+
+.project-detail {
+    border-top: 1px solid var(--clr-primary-400);
+    font-size: 0.925rem;
+}
+
+.project-detail__name {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.technologies-wrapper {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.technologies-wrapper li {
+    border: 1px solid var(--clr-neutral-900);
+    border-radius: 0.5rem;
+    padding: 0.125rem 1rem;
+}
+
+/* Contact Styles */
+.section.contact {
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    color: var(--clr-neutral-100);
+}
+
+.contact__description {
+    width: 60%;
+    text-align: center;
+    margin: 2rem auto;
+    font-weight: 500;
+}
+
+.section.contact .btn {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+    padding: 4rem;
+    text-align: center;
+}
+
+.socials-wrapper {
+    font-size: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
