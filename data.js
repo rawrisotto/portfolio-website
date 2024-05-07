@@ -143,4 +143,22 @@ export const data = [
         source: "https://github.com/rawrisotto/huddle-landing-page-with-single-introductory-section-master",
         live: "https://huddle-landing-page-with-single-intr-hidayats-projects-a04903ae.vercel.app/"
     },
+    {
+        id: 17,
+        name: "Portfolio Website",
+        created: new Date("May 6, 2024"),
+        technologies: ["HTML5", "CSS3", "React", "JavaScript"],
+        description: "Portfolio website for Muhammad Hidayat Bin Salaman.",
+        source: "https://github.com/rawrisotto/portfolio-website",
+        live: "https://mdhidayatbs.vercel.app/"
+    },
+    {
+        id: 18,
+        name: "Insure Landing Page",
+        created: new Date("May 6, 2024"),
+        technologies: ["HTML5", "React", "JavaScript", "TailwindCSS"],
+        description: "Frontend Mentor Challenge. Responsive and beautiful landing page.",
+        source: "https://github.com/rawrisotto/insure-landing-page",
+        live: "https://insure-landing-page-one-khaki.vercel.app/"
+    },
 ]
