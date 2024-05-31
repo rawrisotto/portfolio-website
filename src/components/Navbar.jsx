@@ -59,7 +59,7 @@ const Navbar = () => {
           <span className="sr-only">LinkedIn</span>
         </NavLink>
         <Link
-          to="https://www.dropbox.com/scl/fi/ciy0xk6ibojzkl8l5fw81/Resume.pdf?rlkey=bhdqh6l4dmv02t47c3w52nr0y&st=rmvfdvz2&dl=0"
+          to="https://www.dropbox.com/scl/fi/clxtogy3aj3bjn228wu02/Resume.pdf?rlkey=cycuyv89zc2vtk0quya11stvh&st=x80x1i99&dl=0"
           target="_blank"
           onClick={() => handleMenuOpen()}
         >
